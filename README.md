@@ -91,7 +91,7 @@ async function analyzeIndexes() {
 
 *Code review:*
  - The `return await` in the `getIndexes` function has no benefit. it's redundant because the `analyzeIndexes` function will also await it, so there is no reason to not just send the Promise along and let `analyzeIndexes` function deal with it.
- - You could also use a `try/catch` in the `analyzeIndexes` function to catch the error and deal with. 
+ - You could also use a `try/catch` in the `analyzeIndexes` function to catch the error. 
 
 ```js
 function getIndexes() {
